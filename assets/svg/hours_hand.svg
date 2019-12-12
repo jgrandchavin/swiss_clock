@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="506px" viewBox="0 0 100 506" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="-106" y="169" width="313" height="14" rx="3"></rect>
+        <filter x="-0.6%" y="-14.3%" width="101.3%" height="128.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="1.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.403682255 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#E2AC8F" transform="translate(50.000000, 457.000000) rotate(180.000000) translate(-50.000000, -457.000000) " cx="50" cy="457" r="50"></circle>
+        <circle id="Oval" fill="#2D2D2D" transform="translate(50.500000, 456.500000) rotate(180.000000) translate(-50.500000, -456.500000) " cx="50.5" cy="456.5" r="26.5"></circle>
+        <rect id="Rectangle" fill="#E2AC8F" transform="translate(50.000000, 369.000000) rotate(-90.000000) translate(-50.000000, -369.000000) " x="-11" y="351" width="122" height="36"></rect>
+        <polygon id="Path" fill="#E2AC8F" transform="translate(50.261879, 179.046789) rotate(-48.000000) translate(-50.261879, -179.046789) " points="-90.9664427 290.485767 -92.8002943 265.436305 147.360757 49.1943223 171.120642 47.1872926 193.324051 71.8466775 188.093434 94.4325427 -52.3250174 310.906289 -77.7366827 305.348099"></polygon>
+        <g id="Rectangle" transform="translate(50.500000, 176.000000) rotate(-90.000000) translate(-50.500000, -176.000000) ">
+            <use fill="#E2E9EB" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

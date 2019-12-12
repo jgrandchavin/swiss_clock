@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="860px" viewBox="0 0 100 860" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-63.9%" y="-5.0%" width="227.9%" height="110.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <rect id="path-2" x="-282" y="348" width="664" height="14" rx="3"></rect>
+        <filter x="-0.3%" y="-14.3%" width="100.6%" height="128.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="1.5" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.403682255 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" filter="url(#filter-1)" transform="translate(19.000000, 1.165983)" fill="#E2AC8F">
+            <polygon id="Path" points="19.7497445 711.556686 0.119199029 696.348954 0.119199029 21.8426219 19.7497445 0.0406924585 39.5213106 0 60.6085512 17.7895598 60.6085512 696.348954 39.5213106 711.556686"></polygon>
+            <rect id="Rectangle" transform="translate(31.000000, 721.834017) rotate(-90.000000) translate(-31.000000, -721.834017) " x="-30" y="703.834017" width="122" height="36"></rect>
+        </g>
+        <g id="Rectangle" transform="translate(50.000000, 355.000000) rotate(-90.000000) translate(-50.000000, -355.000000) ">
+            <use fill="#E2E9EB" fill-rule="evenodd" xlink:href="#path-2"></use>
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+        </g>
+        <circle id="Oval" fill="#E2AC8F" transform="translate(50.000000, 811.000000) rotate(180.000000) translate(-50.000000, -811.000000) " cx="50" cy="811" r="50"></circle>
+        <circle id="Oval" fill="#2D2D2D" transform="translate(50.500000, 810.500000) rotate(180.000000) translate(-50.500000, -810.500000) " cx="50.5" cy="810.5" r="26.5"></circle>
+    </g>
+</svg>
