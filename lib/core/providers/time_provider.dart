@@ -16,8 +16,9 @@ class TimeProvider extends BaseProvider {
 
   void _updateTime() {
     _inDateTime(DateTime.now());
-    print(DateTime.now().hour);
-    Timer(Duration(seconds: 1), () => _updateTime());
+    print(DateTime.now());
+
+    Timer(Duration(milliseconds: 250), () => _updateTime());
   }
 
   @override

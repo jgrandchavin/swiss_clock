@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:swiss_clock/core/viewmodels/screens/watch_screen_model.dart';
 import 'package:swiss_clock/ui/shared/view_model_provider.dart';
@@ -14,7 +12,6 @@ class WatchScreen extends StatelessWidget {
       model: WatchScreenModel(context: context),
       builder: (WatchScreenModel model) {
         return Scaffold(
-          backgroundColor: Colors.black45,
           body: Container(
             child: StreamBuilder<DateTime>(
               stream: model.timeProvider.outDateTime,
@@ -24,34 +21,23 @@ class WatchScreen extends StatelessWidget {
                     child: Stack(
                   alignment: Alignment.center,
                   children: <Widget>[
-                    Positioned.fill(child: Image.asset('assets/png/watch.png')),
-                    Positioned(
-                      top: 80,
-                      child: Center(
-                        child: Transform.rotate(
-                            alignment: Alignment.bottomCenter,
-                            angle: dateTimeSnapshot.data.minute * pi / 30,
-                            child: MinuteHand()),
-                      ),
+                    Positioned.fill(
+                        child: Image.asset(
+                      'assets/png/watch.png',
+                      height: model.watchSize,
+                    )),
+                    HourHand(
+                      handSize: model.hourHandSize,
+                      currentHour: dateTimeSnapshot.data.hour,
                     ),
-                    Positioned(
-                      top: 115,
-                      child: Center(
-                        child: Transform.rotate(
-                            alignment: Alignment.bottomCenter,
-                            angle: dateTimeSnapshot.data.hour * pi / 6,
-                            child: HourHand()),
-                      ),
+                    MinuteHand(
+                      handSize: model.minutesHandSize,
+                      currentMinute: dateTimeSnapshot.data.minute,
                     ),
-                    Positioned(
-                      top: 82,
-                      child: Center(
-                        child: Transform.rotate(
-                            alignment: Alignment.bottomCenter,
-                            angle: dateTimeSnapshot.data.second * pi / 30,
-                            origin: Offset(0, -25),
-                            child: SecondHand()),
-                      ),
+                    SecondHand(
+                      currentSecond:
+                          (dateTimeSnapshot.data.millisecond / 1000) + dateTimeSnapshot.data.second,
+                      handSize: model.secondsHandSize,
                     ),
                   ],
                 ));

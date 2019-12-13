@@ -1,18 +1,30 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class HourHand extends StatelessWidget {
+  final int currentHour;
+  final double handSize;
+
+  HourHand({@required this.currentHour, @required this.handSize});
+
   @override
   Widget build(BuildContext context) {
-    return Transform.translate(
-      offset: Offset(0, 5),
-      child: Container(
-        height: 80,
-        child: Image.asset(
-          'assets/png/hours_hand.png',
-          height: 80,
-          fit: BoxFit.fitHeight,
-        ),
-      ),
-    );
+    return Positioned(
+        top: handSize * 1.59,
+        child: Center(
+            child: Transform.rotate(
+          alignment: Alignment.bottomCenter,
+          origin: Offset(0, -8),
+          angle: currentHour * pi / 6,
+          child: Container(
+            height: handSize,
+            child: Image.asset(
+              'assets/png/hours_hand.png',
+              height: handSize,
+              fit: BoxFit.fitHeight,
+            ),
+          ),
+        )));
   }
 }

@@ -1,4 +1,4 @@
-package com.example.swiss_clock
+package dev.juliengrandchavin.swiss_watch
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
