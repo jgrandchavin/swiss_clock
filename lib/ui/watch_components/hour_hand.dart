@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class HourHand extends StatelessWidget {
-  final int currentHour;
+  final double currentHour;
   final double handSize;
 
   HourHand({@required this.currentHour, @required this.handSize});
@@ -11,7 +11,7 @@ class HourHand extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        top: handSize * 1.59,
+        top: handSize * 1.46,
         child: Center(
             child: Transform.rotate(
           alignment: Alignment.bottomCenter,

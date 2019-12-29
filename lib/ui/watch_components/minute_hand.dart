@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class MinuteHand extends StatelessWidget {
-  final int currentMinute;
+  final double currentMinute;
   final double handSize;
 
   MinuteHand({@required this.currentMinute, @required this.handSize});

@@ -8,9 +8,14 @@ class WatchScreenModel extends BaseViewModel {
   double hourHandSize;
 
   WatchScreenModel({@required BuildContext context}) : super(context: context) {
-    watchSize = MediaQuery.of(context).size.height;
-    secondsHandSize = watchSize * 0.44;
-    minutesHandSize = watchSize * 0.35;
+    _initWatchSize();
+  }
+
+  /// Init watch and components size
+  void _initWatchSize() {
+    watchSize = MediaQuery.of(context).size.height + MediaQuery.of(context).padding.vertical;
+    secondsHandSize = watchSize * 0.42;
+    minutesHandSize = watchSize * 0.33;
     hourHandSize = watchSize * 0.20;
   }
 }

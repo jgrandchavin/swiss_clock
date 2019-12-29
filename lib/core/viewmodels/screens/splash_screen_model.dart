@@ -9,6 +9,7 @@ class SplashScreenViewModel extends BaseViewModel {
     _redirection();
   }
 
+  /// Redirect to the watch after 2 seconds
   void _redirection() async {
     await Future.delayed(Duration(seconds: 2));
     Navigator.of(context)

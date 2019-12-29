@@ -11,7 +11,7 @@ class SecondHand extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: handSize * 0.355,
+      top: handSize * 0.34,
       child: Center(
         child: Transform.rotate(
             alignment: Alignment.bottomCenter,
