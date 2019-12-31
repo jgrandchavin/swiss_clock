@@ -7,14 +7,9 @@ enum GearType { gold, silver, silver2, silver3 }
 class Gear extends StatefulWidget {
   final GearType gearType;
   final double size;
-  final double rotationSpeed;
   final bool reverse;
 
-  Gear(
-      {@required this.gearType,
-      @required this.size,
-      @required this.rotationSpeed,
-      this.reverse = false});
+  Gear({@required this.gearType, @required this.size, this.reverse = false});
 
   @override
   _GearState createState() => _GearState();

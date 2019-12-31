@@ -17,146 +17,164 @@ class WatchScreen extends StatelessWidget {
         return Scaffold(
           body: Center(
             child: Container(
-              height: model.watchSize,
-              width: model.watchSize,
-              child: StreamBuilder<DateTime>(
-                stream: model.timeProvider.outDateTime,
-                initialData: model.timeProvider.currentDateTime,
-                builder: (_, dateTimeSnapshot) {
-                  return Stack(
-                    alignment: Alignment.center,
+              height: model.screenHeight,
+              width: model.screenWidth,
+              decoration: BoxDecoration(color: Colors.black45, boxShadow: [
+                BoxShadow(color: Colors.black.withOpacity(.5), blurRadius: 10, spreadRadius: 1)
+              ]),
+              child: Center(
+                child: Container(
+                  height: model.screenHeight,
+                  width: model.screenHeight,
+                  child: Stack(
+                    overflow: Overflow.visible,
                     children: <Widget>[
-                      Positioned.fill(
-                          child: Image.asset(
-                        'assets/png/watch.png',
-                        height: model.watchSize,
-                      )),
-                      Positioned(
-                          top: model.watchSize * 0.19,
-                          bottom: model.watchSize * 0.19,
-                          child: SvgPicture.asset('assets/svg/skelet_base.svg')),
-                      Positioned(
-                          top: model.watchSize * 0.273,
-                          left: model.watchSize * 0.29,
-                          child: Gear(
-                            size: model.watchSize * 0.1,
-                            gearType: GearType.silver,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.352,
-                          left: model.watchSize * 0.299,
-                          child: Gear(
-                            size: model.watchSize * 0.08,
-                            gearType: GearType.silver,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.465,
-                          left: model.watchSize * 0.388,
-                          child: Gear(
-                            size: model.watchSize * 0.08,
-                            gearType: GearType.silver,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.23,
-                          left: model.watchSize * 0.375,
-                          child: Gear(
-                            size: model.watchSize * 0.08,
-                            gearType: GearType.silver,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.238,
-                          left: model.watchSize * 0.319,
-                          child: Gear(
-                            size: model.watchSize * 0.087,
-                            gearType: GearType.gold,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.333,
-                          left: model.watchSize * 0.355,
-                          child: Gear(
-                            size: model.watchSize * 0.087,
-                            gearType: GearType.gold,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.365,
-                          left: model.watchSize * 0.435,
-                          child: Gear(
-                            size: model.watchSize * 0.087,
-                            gearType: GearType.gold,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.5,
-                          left: model.watchSize * 0.383,
-                          child: Gear(
-                            size: model.watchSize * 0.17,
-                            gearType: GearType.gold,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.41,
-                          left: model.watchSize * 0.445,
-                          child: Gear(
-                            size: model.watchSize * 0.20,
-                            gearType: GearType.gold,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.4,
-                          left: model.watchSize * 0.432,
-                          child: Gear(
-                            size: model.watchSize * 0.22,
-                            gearType: GearType.silver2,
-                            rotationSpeed: 1,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.41,
-                          left: model.watchSize * 0.43,
-                          child: Gear(
-                            size: model.watchSize * 0.13,
-                            gearType: GearType.silver3,
-                            rotationSpeed: 1,
-                            reverse: true,
-                          )),
-                      Positioned(
-                          top: model.watchSize * 0.19,
-                          bottom: model.watchSize * 0.19,
-                          child: SvgPicture.asset('assets/svg/skelet.svg')),
-                      Positioned(
-                        top: model.watchSize * 0.49,
-                        left: model.watchSize * 0.245,
-                        child: Balancer(
-                          watchSize: model.watchSize,
-                        ),
+                      StreamBuilder<DateTime>(
+                        stream: model.timeProvider.outDateTime,
+                        initialData: model.timeProvider.currentDateTime,
+                        builder: (_, dateTimeSnapshot) {
+                          return Stack(
+                            alignment: Alignment.center,
+                            fit: StackFit.expand,
+                            children: <Widget>[
+                              Positioned.fill(
+                                  child: Image.asset(
+                                'assets/png/watch.png',
+                                height: model.screenHeight,
+                              )),
+                              Positioned(
+                                  top: model.screenHeight * 0.18,
+                                  bottom: model.screenHeight * 0.18,
+                                  child: Container(
+                                      height: model.screenHeight * 0.56,
+                                      child: SvgPicture.asset('assets/svg/skelet_base.svg'))),
+                              Positioned(
+                                  top: model.screenHeight * 0.284,
+                                  left: model.screenHeight * 0.274,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.1,
+                                    gearType: GearType.silver,
+                                    reverse: true,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.363,
+                                  left: model.screenHeight * 0.281,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.08,
+                                    gearType: GearType.silver,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.494,
+                                  left: model.screenHeight * 0.383,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.08,
+                                    gearType: GearType.silver,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.23,
+                                  left: model.screenHeight * 0.365,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.08,
+                                    gearType: GearType.silver,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.24,
+                                  left: model.screenHeight * 0.301,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.087,
+                                    gearType: GearType.gold,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.345,
+                                  left: model.screenHeight * 0.342,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.087,
+                                    gearType: GearType.gold,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.38,
+                                  left: model.screenHeight * 0.435,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.087,
+                                    gearType: GearType.gold,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.54,
+                                  left: model.screenHeight * 0.378,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.17,
+                                    gearType: GearType.gold,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.45,
+                                  left: model.screenHeight * 0.44,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.20,
+                                    gearType: GearType.gold,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.43,
+                                  left: model.screenHeight * 0.427,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.22,
+                                    gearType: GearType.silver2,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.43,
+                                  left: model.screenHeight * 0.425,
+                                  child: Gear(
+                                    size: model.screenHeight * 0.13,
+                                    gearType: GearType.silver3,
+                                    reverse: true,
+                                  )),
+                              Positioned(
+                                  top: model.screenHeight * 0.18,
+                                  bottom: model.screenHeight * 0.18,
+                                  left: 0,
+                                  right: 0,
+                                  child: Container(
+                                      height: model.screenHeight * 0.56,
+                                      child: SvgPicture.asset('assets/svg/skelet.svg'))),
+                              Positioned(
+                                top: model.screenHeight * 0.52,
+                                left: model.screenHeight * 0.225,
+                                child: Balancer(
+                                  watchSize: model.screenHeight,
+                                ),
+                              ),
+                              Positioned(
+                                  top: model.screenHeight * 0.18,
+                                  bottom: model.screenHeight * 0.18,
+                                  child: SvgPicture.asset('assets/svg/piece1.svg')),
+                              HourHand(
+                                handSize: model.hourHandSize,
+                                currentHour: (dateTimeSnapshot.data.minute / 60) +
+                                    dateTimeSnapshot.data.hour,
+                              ),
+                              MinuteHand(
+                                handSize: model.minutesHandSize,
+                                currentMinute: (dateTimeSnapshot.data.second / 60) +
+                                    dateTimeSnapshot.data.minute,
+                              ),
+                              SecondHand(
+                                currentSecond: (dateTimeSnapshot.data.millisecond / 1000) +
+                                    dateTimeSnapshot.data.second,
+                                handSize: model.secondsHandSize,
+                              ),
+                            ],
+                          );
+                        },
                       ),
                       Positioned(
-                          top: model.watchSize * 0.19,
-                          bottom: model.watchSize * 0.19,
-                          child: SvgPicture.asset('assets/svg/piece1.svg')),
-                      HourHand(
-                        handSize: model.hourHandSize,
-                        currentHour:
-                            (dateTimeSnapshot.data.minute / 60) + dateTimeSnapshot.data.hour,
-                      ),
-                      MinuteHand(
-                        handSize: model.minutesHandSize,
-                        currentMinute:
-                            (dateTimeSnapshot.data.second / 60) + dateTimeSnapshot.data.minute,
-                      ),
-                      SecondHand(
-                        currentSecond: (dateTimeSnapshot.data.millisecond / 1000) +
-                            dateTimeSnapshot.data.second,
-                        handSize: model.secondsHandSize,
-                      ),
+                        top: model.screenHeight * 0.5 - model.screenHeight * 0.13 / 2,
+                        right: model.screenHeight * -0.034,
+                        child: Container(
+                            height: model.screenHeight * 0.13,
+                            child: Image.asset('assets/png/piece3.png')),
+                      )
                     ],
-                  );
-                },
+                  ),
+                ),
               ),
             ),
           ),

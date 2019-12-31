@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:swiss_clock/core/viewmodels/base_view_model.dart';
 
 class WatchScreenModel extends BaseViewModel {
-  double watchSize;
+  double screenHeight;
+  double screenWidth;
   double secondsHandSize;
   double minutesHandSize;
   double hourHandSize;
@@ -13,9 +14,16 @@ class WatchScreenModel extends BaseViewModel {
 
   /// Init watch and components size
   void _initWatchSize() {
-    watchSize = MediaQuery.of(context).size.height + MediaQuery.of(context).padding.vertical;
-    secondsHandSize = watchSize * 0.42;
-    minutesHandSize = watchSize * 0.33;
-    hourHandSize = watchSize * 0.20;
+    if (MediaQuery.of(context).size.width / (5 / 3) > MediaQuery.of(context).size.height) {
+      screenHeight = MediaQuery.of(context).size.height - 32;
+      screenWidth = screenHeight * (5 / 3);
+    } else {
+      screenHeight = (MediaQuery.of(context).size.width - 32) / (5 / 3);
+      screenWidth = MediaQuery.of(context).size.width - 32;
+    }
+
+    secondsHandSize = screenHeight * 0.44;
+    minutesHandSize = screenHeight * 0.35;
+    hourHandSize = screenHeight * 0.22;
   }
 }
