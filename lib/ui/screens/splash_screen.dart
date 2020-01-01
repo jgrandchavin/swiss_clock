@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swiss_clock/core/viewmodels/screens/splash_screen_view_model.dart';
+import 'package:swiss_clock/core/viewmodels/screens/splash_screen_model.dart';
 import 'package:swiss_clock/ui/shared/view_model_provider.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -17,12 +17,18 @@ class SplashScreen extends StatelessWidget {
                 Text(
                   'Swiss Watch',
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 25),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 25),
                 ),
                 Text(
                   'by Julien Grand-Chavin',
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300, fontSize: 10),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 10),
                 )
               ],
             ),

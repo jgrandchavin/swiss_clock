@@ -1,16 +1,17 @@
-# swiss_clock
+# Swiss Clock - Flutter Clock Contest Submission
 
-A new Flutter project.
+For the Flutter Clock contest I choose to build a mechanic Swiss watch.
 
-## Getting Started
+## Preview
 
-This project is a starting point for a Flutter application.
+![enter image description here](https://github.com/jgrandchavin/swiss_clock/blob/master/assets/screenshots/screenshot_1.jpeg?raw=true)
 
-A few resources to get you started if this is your first Flutter project:
+## How it work
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+The clock actualize every **250 milliseconds** like high-end mechanic watch.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Balancer and gear are animated with code (not with Flare/Rive).
+
+## Assets 
+
+All assets are made in vectorial with Sketch by myself.
