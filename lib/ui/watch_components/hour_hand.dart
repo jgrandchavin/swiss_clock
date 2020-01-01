@@ -17,7 +17,8 @@ class HourHand extends StatelessWidget {
         child: Center(
             child: Transform.rotate(
           alignment: Alignment.bottomCenter,
-          origin: Offset(0, -Provider.of<WatchScreenModel>(context).screenHeight * 0.02),
+          origin: Offset(
+              0, -Provider.of<WatchScreenModel>(context).screenHeight * 0.02),
           angle: currentHour * pi / 6,
           child: Container(
             height: handSize,

@@ -13,7 +13,8 @@ class ViewModelProvider<T extends BaseViewModel> extends StatelessWidget {
     return ChangeNotifierProvider<T>(
       create: (BuildContext context2) => model,
       child: Consumer<T>(
-        builder: (BuildContext context, T value, Widget child) => builder(value),
+        builder: (BuildContext context, T value, Widget child) =>
+            builder(value),
       ),
     );
   }

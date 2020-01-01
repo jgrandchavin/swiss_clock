@@ -19,10 +19,13 @@ class _GearState extends State<Gear> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return ViewModelProvider<GearModel>(
-      model: GearModel(context: context, tickerProvider: this, gearType: widget.gearType),
+      model: GearModel(
+          context: context, tickerProvider: this, gearType: widget.gearType),
       builder: (GearModel model) {
         return RotationTransition(
-          turns: Tween(begin: widget.reverse ? 1.0 : 0.0, end: widget.reverse ? 0.0 : 1.0)
+          turns: Tween(
+                  begin: widget.reverse ? 1.0 : 0.0,
+                  end: widget.reverse ? 0.0 : 1.0)
               .animate(model.animationController),
           child: Container(
             height: widget.size,

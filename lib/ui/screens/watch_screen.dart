@@ -20,7 +20,10 @@ class WatchScreen extends StatelessWidget {
               height: model.screenHeight,
               width: model.screenWidth,
               decoration: BoxDecoration(color: Colors.black45, boxShadow: [
-                BoxShadow(color: Colors.black.withOpacity(.5), blurRadius: 10, spreadRadius: 1)
+                BoxShadow(
+                    color: Colors.black.withOpacity(.5),
+                    blurRadius: 10,
+                    spreadRadius: 1)
               ]),
               child: Center(
                 child: Container(
@@ -47,7 +50,8 @@ class WatchScreen extends StatelessWidget {
                                   bottom: model.screenHeight * 0.18,
                                   child: Container(
                                       height: model.screenHeight * 0.56,
-                                      child: SvgPicture.asset('assets/svg/skelet_base.svg'))),
+                                      child: SvgPicture.asset(
+                                          'assets/svg/skelet_base.svg'))),
                               Positioned(
                                   top: model.screenHeight * 0.284,
                                   left: model.screenHeight * 0.274,
@@ -134,7 +138,8 @@ class WatchScreen extends StatelessWidget {
                                   right: 0,
                                   child: Container(
                                       height: model.screenHeight * 0.56,
-                                      child: SvgPicture.asset('assets/svg/skelet.svg'))),
+                                      child: SvgPicture.asset(
+                                          'assets/svg/skelet.svg'))),
                               Positioned(
                                 top: model.screenHeight * 0.52,
                                 left: model.screenHeight * 0.225,
@@ -145,20 +150,24 @@ class WatchScreen extends StatelessWidget {
                               Positioned(
                                   top: model.screenHeight * 0.18,
                                   bottom: model.screenHeight * 0.18,
-                                  child: SvgPicture.asset('assets/svg/piece1.svg')),
+                                  child: SvgPicture.asset(
+                                      'assets/svg/piece1.svg')),
                               HourHand(
                                 handSize: model.hourHandSize,
-                                currentHour: (dateTimeSnapshot.data.minute / 60) +
-                                    dateTimeSnapshot.data.hour,
+                                currentHour:
+                                    (dateTimeSnapshot.data.minute / 60) +
+                                        dateTimeSnapshot.data.hour,
                               ),
                               MinuteHand(
                                 handSize: model.minutesHandSize,
-                                currentMinute: (dateTimeSnapshot.data.second / 60) +
-                                    dateTimeSnapshot.data.minute,
+                                currentMinute:
+                                    (dateTimeSnapshot.data.second / 60) +
+                                        dateTimeSnapshot.data.minute,
                               ),
                               SecondHand(
-                                currentSecond: (dateTimeSnapshot.data.millisecond / 1000) +
-                                    dateTimeSnapshot.data.second,
+                                currentSecond:
+                                    (dateTimeSnapshot.data.millisecond / 1000) +
+                                        dateTimeSnapshot.data.second,
                                 handSize: model.secondsHandSize,
                               ),
                             ],
@@ -166,7 +175,8 @@ class WatchScreen extends StatelessWidget {
                         },
                       ),
                       Positioned(
-                        top: model.screenHeight * 0.5 - model.screenHeight * 0.13 / 2,
+                        top: model.screenHeight * 0.5 -
+                            model.screenHeight * 0.13 / 2,
                         right: model.screenHeight * -0.034,
                         child: Container(
                             height: model.screenHeight * 0.13,

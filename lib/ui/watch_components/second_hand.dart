@@ -18,7 +18,8 @@ class SecondHand extends StatelessWidget {
         child: Transform.rotate(
             alignment: Alignment.bottomCenter,
             angle: currentSecond * pi / 30,
-            origin: Offset(0, -Provider.of<WatchScreenModel>(context).screenHeight * 0.097),
+            origin: Offset(0,
+                -Provider.of<WatchScreenModel>(context).screenHeight * 0.097),
             child: Container(
               height: handSize,
               child: Image.asset(

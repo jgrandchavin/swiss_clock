@@ -7,7 +7,8 @@ class TimeProvider extends BaseProvider {
   Timer timer;
 
   // User subject
-  BehaviorSubject<DateTime> _dateTimeSubject = BehaviorSubject<DateTime>.seeded(DateTime.now());
+  BehaviorSubject<DateTime> _dateTimeSubject =
+      BehaviorSubject<DateTime>.seeded(DateTime.now());
   Function(DateTime) get _inDateTime => _dateTimeSubject.sink.add;
   Observable<DateTime> get outDateTime => _dateTimeSubject.stream;
   DateTime get currentDateTime => _dateTimeSubject.value;
@@ -18,7 +19,9 @@ class TimeProvider extends BaseProvider {
 
   void _updateTime() {
     if (!_dateTimeSubject.isClosed) _inDateTime(DateTime.now());
-    timer = Timer(Duration(milliseconds: 250) - Duration(microseconds: DateTime.now().microsecond),
+    timer = Timer(
+        Duration(milliseconds: 250) -
+            Duration(microseconds: DateTime.now().microsecond),
         () => _updateTime());
   }
 

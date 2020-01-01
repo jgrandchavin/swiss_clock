@@ -18,8 +18,8 @@ class GearModel extends BaseViewModel {
 
   /// Init animation
   void _initAnimation({@required TickerProvider tickerProvider}) {
-    animationController =
-        AnimationController(duration: const Duration(seconds: 30), vsync: tickerProvider);
+    animationController = AnimationController(
+        duration: const Duration(seconds: 30), vsync: tickerProvider);
     animationController.repeat();
   }
 

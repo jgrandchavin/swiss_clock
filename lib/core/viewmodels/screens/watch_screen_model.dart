@@ -14,7 +14,8 @@ class WatchScreenModel extends BaseViewModel {
 
   /// Init watch and components size
   void _initWatchSize() {
-    if (MediaQuery.of(context).size.width / (5 / 3) > MediaQuery.of(context).size.height) {
+    if (MediaQuery.of(context).size.width / (5 / 3) >
+        MediaQuery.of(context).size.height) {
       screenHeight = MediaQuery.of(context).size.height - 32;
       screenWidth = screenHeight * (5 / 3);
     } else {
